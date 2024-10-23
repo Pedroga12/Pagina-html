@@ -1,0 +1,117 @@
+/* Reset de márgenes y paddings predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 15px; /* Espacio para que el contenido no quede detrás de la barra fija */
+}
+
+/* Barra de navegación */
+nav {
+    position: fixed; /* Hace que la barra esté fija */
+    top: 0; /* La coloca en la parte superior */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: #333; /* Color de fondo oscuro */
+    z-index: 100; /* Asegura que siempre esté por encima del contenido */
+}
+
+/* Lista dentro de la barra de navegación */
+nav ul {
+    list-style-type: none;
+    text-align: left;
+    padding: 25px 0;
+}
+
+/* Enlaces dentro de la barra de navegación */
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+    margin: 0 5px; /* Espaciado entre los enlaces */
+}
+
+nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+/* Efecto de hover en los enlaces */
+nav ul li a:hover {
+    background-color: #555; /* Fondo oscuro al pasar el cursor */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del contenido principal */
+.contenido {
+    padding: 20px;
+}
+
+/* Estilo de las secciones */
+section {
+    margin-bottom: 50px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* ¡BUSCADOR! */
+
+/* Estilo del contenedor de la barra de búsqueda */
+.barra-busqueda {
+    text-align: center;
+    top: 0;
+
+}
+
+/* Estilo del formulario */
+form {
+    display: inline-block;
+    border: 2px solid #1eb53a;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    z-index: 1000;
+    position: relative;
+}
+
+/* Estilo del campo de entrada */
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    z-index: 1000;
+    position: relative;    
+}
+
+/* Estilo del botón */
+button {
+    padding: 10px 15px;
+    background-color: #1eb53a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    z-index: 1000;
+    position: relative;
+}
+
+/* Efecto de hover en el botón */
+button:hover {
+    background-color: #555;
+}
