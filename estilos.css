@@ -9,7 +9,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding-top: 15px; /* Espacio para que el contenido no quede detrás de la barra fija */
+    padding-top: px; /* Espacio para que el contenido no quede detrás de la barra fija */
+    background-color:#1b1919
 }
 
 /* Barra de navegación */
@@ -17,7 +18,7 @@ nav {
     position: fixed; /* Hace que la barra esté fija */
     top: 0; /* La coloca en la parte superior */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
-    background-color: #333; /* Color de fondo oscuro */
+    background-color: #000000; /* Color de fondo oscuro */
     z-index: 100; /* Asegura que siempre esté por encima del contenido */
 }
 
@@ -25,7 +26,7 @@ nav {
 nav ul {
     list-style-type: none;
     text-align: left;
-    padding: 25px 0;
+    padding: 20px 0;
 }
 
 /* Enlaces dentro de la barra de navegación */
@@ -35,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Color del texto de los enlaces */
+    color: rgb(106, 102, 102); /* Color del texto de los enlaces */
     text-decoration: none; /* Sin subrayado */
     font-size: 18px;
     padding: 5px 10px;
@@ -81,7 +82,7 @@ form {
     border: 2px solid #1eb53a;
     padding: 10px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #1b1919;
     z-index: 1000;
     position: relative;
 }
@@ -90,11 +91,12 @@ form {
 input[type="text"] {
     padding: 10px;
     width: 300px;
-    border: 1px solid #ccc;
+    border: 1px solid #1eb53a;
     border-radius: 4px;
     font-size: 16px;
     z-index: 1000;
     position: relative;    
+    background-color:#1b1919
 }
 
 /* Estilo del botón */
@@ -114,4 +116,13 @@ button {
 /* Efecto de hover en el botón */
 button:hover {
     background-color: #555;
+}
+
+/* Iconos */
+.contenedor-icono svg {
+    width: 35px;
+    height: 35px;
+    color: #555;
+    z-index: 1100;
+    position: fixed; top: 15px; left: 1325px;
 }
