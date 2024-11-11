@@ -21,7 +21,7 @@
                 "is_hidden": true,
                 "slot": 3
             }
-        ],
+          ],
         "base_experience": 64,
         "sprites": {
             "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
@@ -107,7 +107,47 @@
       },
       {
         "name": "charmander",
-        "url": "https://pokeapi.co/api/v2/pokemon/4/"
+        "url": "https://pokeapi.co/api/v2/pokemon/4/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "blaze",
+                "url": "https://pokeapi.co/api/v2/ability/66/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "solar-power",
+                "url": "https://pokeapi.co/api/v2/ability/94/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 62,
+        "sprites": {
+              "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
+              "back_female": null,
+              "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/4.png",
+              "back_shiny_female": null,
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+              "front_female": null,
+              "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png",
+              "front_shiny_female": null
+
+      },
+      "types": [
+              {
+                "slot": 1,
+                "type": {
+                  "name": "fire",
+                  "url": "https://pokeapi.co/api/v2/type/10/"
+                }
+              }
+            ],
+      "weight": 85
       },
       {
         "name": "charmeleon",
@@ -205,7 +245,61 @@
       },
       {
         "name": "pidgeotto",
-        "url": "https://pokeapi.co/api/v2/pokemon/17/"
+        "url": "https://pokeapi.co/api/v2/pokemon/17/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "keen-eye",
+                "url": "https://pokeapi.co/api/v2/ability/51/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "tangled-feet",
+                "url": "https://pokeapi.co/api/v2/ability/77/"
+              },
+              "is_hidden": false,
+              "slot": 2
+            },
+            {
+              "ability": {
+                "name": "big-pecks",
+                "url": "https://pokeapi.co/api/v2/ability/145/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 122,
+        "sprites": {
+              "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png",
+              "back_female": null,
+              "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/17.png",
+              "back_shiny_female": null,
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+              "front_female": null,
+              "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/17.png",
+              "front_shiny_female": null
+          },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "normal",
+                "url": "https://pokeapi.co/api/v2/type/1/"
+              }
+            },
+            {
+              "slot": 2,
+              "type": {
+                "name": "flying",
+                "url": "https://pokeapi.co/api/v2/type/3/"
+              }
+            }
+        ],
+        "weight": 300
       },
       {
         "name": "pidgeot",
@@ -213,7 +307,54 @@
       },
       {
         "name": "rattata",
-        "url": "https://pokeapi.co/api/v2/pokemon/19/"
+        "url": "https://pokeapi.co/api/v2/pokemon/19/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "run-away",
+                "url": "https://pokeapi.co/api/v2/ability/50/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "guts",
+                "url": "https://pokeapi.co/api/v2/ability/62/"
+              },
+              "is_hidden": false,
+              "slot": 2
+            },
+            {
+              "ability": {
+                "name": "hustle",
+                "url": "https://pokeapi.co/api/v2/ability/55/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 51,
+        "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/19.png",
+            "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/19.png",
+            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/19.png",
+            "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/19.png",
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+            "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/19.png",
+            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/19.png",
+            "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/19.png"
+        },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "normal",
+                "url": "https://pokeapi.co/api/v2/type/1/"
+              }
+            }
+          ],
+        "weight": 35
       },
       {
         "name": "raticate",
@@ -229,19 +370,192 @@
       },
       {
         "name": "ekans",
-        "url": "https://pokeapi.co/api/v2/pokemon/23/"
+        "url": "https://pokeapi.co/api/v2/pokemon/23/",
+        "abilities": [
+              {
+                "ability": {
+                  "name": "intimidate",
+                  "url": "https://pokeapi.co/api/v2/ability/22/"
+                },
+                "is_hidden": false,
+                "slot": 1
+              },
+              {
+                "ability": {
+                  "name": "shed-skin",
+                  "url": "https://pokeapi.co/api/v2/ability/61/"
+                },
+                "is_hidden": false,
+                "slot": 2
+              },
+              {
+                "ability": {
+                  "name": "unnerve",
+                  "url": "https://pokeapi.co/api/v2/ability/127/"
+                },
+                "is_hidden": true,
+                "slot": 3
+              }
+            ],
+        "base_experience": 58,
+        "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/23.png",
+            "back_female": null,
+            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/23.png",
+            "back_shiny_female": null,
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+            "front_female": null,
+            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/23.png",
+            "front_shiny_female": null
+        },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "poison",
+                "url": "https://pokeapi.co/api/v2/type/4/"
+              }
+            }
+          ],
+        "weight": 69
+
       },
       {
         "name": "arbok",
-        "url": "https://pokeapi.co/api/v2/pokemon/24/"
+        "url": "https://pokeapi.co/api/v2/pokemon/24/",
+        "abilities": [
+              {
+                "ability": {
+                  "name": "intimidate",
+                  "url": "https://pokeapi.co/api/v2/ability/22/"
+                },
+                "is_hidden": false,
+                "slot": 1
+              },
+              {
+                "ability": {
+                  "name": "shed-skin",
+                  "url": "https://pokeapi.co/api/v2/ability/61/"
+                },
+                "is_hidden": false,
+                "slot": 2
+              },
+              {
+                "ability": {
+                  "name": "unnerve",
+                  "url": "https://pokeapi.co/api/v2/ability/127/"
+                },
+                "is_hidden": true,
+                "slot": 3
+              }
+            ],
+        "base_experience": 157,
+        "sprites": {
+              "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/24.png",
+              "back_female": null,
+              "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/24.png",
+              "back_shiny_female": null,
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+              "front_female": null,
+              "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/24.png",
+              "front_shiny_female": null
+        },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "poison",
+                "url": "https://pokeapi.co/api/v2/type/4/"
+              }
+            }
+          ],
+         "weight": 650
       },
       {
         "name": "pikachu",
-        "url": "https://pokeapi.co/api/v2/pokemon/25/"
+        "url": "https://pokeapi.co/api/v2/pokemon/25/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "static",
+                "url": "https://pokeapi.co/api/v2/ability/9/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "lightning-rod",
+                "url": "https://pokeapi.co/api/v2/ability/31/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 112,
+        "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+            "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/25.png",
+            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/25.png",
+            "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/25.png",
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+            "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/25.png",
+            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png",
+            "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/25.png"
+        },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "electric",
+                "url": "https://pokeapi.co/api/v2/type/13/"
+              }
+            }
+          ],
+        "weight": 60
       },
       {
         "name": "raichu",
-        "url": "https://pokeapi.co/api/v2/pokemon/26/"
+        "url": "https://pokeapi.co/api/v2/pokemon/26/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "static",
+                "url": "https://pokeapi.co/api/v2/ability/9/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "lightning-rod",
+                "url": "https://pokeapi.co/api/v2/ability/31/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 243,
+        "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/26.png",
+            "back_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/26.png",
+            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/26.png",
+            "back_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/female/26.png",
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+            "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/26.png",
+            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/26.png",
+            "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/26.png"
+        },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "electric",
+                "url": "https://pokeapi.co/api/v2/type/13/"
+              }
+            }
+          ],
+        "weight": 300  
       },
       {
         "name": "sandshrew",
@@ -305,7 +619,53 @@
       },
       {
         "name": "golbat",
-        "url": "https://pokeapi.co/api/v2/pokemon/42/"
+        "url": "https://pokeapi.co/api/v2/pokemon/42/",
+        "abilities": [
+              {
+                "ability": {
+                  "name": "inner-focus",
+                  "url": "https://pokeapi.co/api/v2/ability/39/"
+                },
+                "is_hidden": false,
+                "slot": 1
+              },
+              {
+                "ability": {
+                  "name": "infiltrator",
+                  "url": "https://pokeapi.co/api/v2/ability/151/"
+                },
+                "is_hidden": true,
+                "slot": 3
+              }
+            ],
+        "base_experience": 159,
+        "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/42.png",
+            "back_female": null,
+            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/42.png",
+            "back_shiny_female": null,
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
+            "front_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/42.png",
+            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/42.png",
+            "front_shiny_female": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/female/42.png"
+        },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "poison",
+                "url": "https://pokeapi.co/api/v2/type/4/"
+              }
+            },
+            {
+              "slot": 2,
+              "type": {
+                "name": "flying",
+                "url": "https://pokeapi.co/api/v2/type/3/"
+              }
+            }
+          ],
+        "weight": 550
       },
       {
         "name": "oddish",
@@ -337,7 +697,54 @@
       },
       {
         "name": "diglett",
-        "url": "https://pokeapi.co/api/v2/pokemon/50/"
+        "url": "https://pokeapi.co/api/v2/pokemon/50/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "sand-veil",
+                "url": "https://pokeapi.co/api/v2/ability/8/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "arena-trap",
+                "url": "https://pokeapi.co/api/v2/ability/71/"
+              },
+              "is_hidden": false,
+              "slot": 2
+            },
+            {
+              "ability": {
+                "name": "sand-force",
+                "url": "https://pokeapi.co/api/v2/ability/159/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 53,
+        "sprites": {
+              "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/50.png",
+              "back_female": null,
+              "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/50.png",
+              "back_shiny_female": null,
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+              "front_female": null,
+              "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/50.png",
+              "front_shiny_female": null
+        },
+        "types": [
+          {
+            "slot": 1,
+            "type": {
+              "name": "ground",
+              "url": "https://pokeapi.co/api/v2/type/5/"
+            }
+          }
+        ],
+        "weight": 8
       },
       {
         "name": "dugtrio",
@@ -349,11 +756,105 @@
       },
       {
         "name": "persian",
-        "url": "https://pokeapi.co/api/v2/pokemon/53/"
+        "url": "https://pokeapi.co/api/v2/pokemon/53/",
+        "abilities": [
+              {
+                "ability": {
+                  "name": "limber",
+                  "url": "https://pokeapi.co/api/v2/ability/7/"
+                },
+                "is_hidden": false,
+                "slot": 1
+              },
+              {
+                "ability": {
+                  "name": "technician",
+                  "url": "https://pokeapi.co/api/v2/ability/101/"
+                },
+                "is_hidden": false,
+                "slot": 2
+              },
+              {
+                "ability": {
+                  "name": "unnerve",
+                  "url": "https://pokeapi.co/api/v2/ability/127/"
+                },
+                "is_hidden": true,
+                "slot": 3
+              }
+            ],
+        "base_experience": 154,
+        "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/53.png",
+            "back_female": null,
+            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/53.png",
+            "back_shiny_female": null,
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+            "front_female": null,
+            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/53.png",
+            "front_shiny_female": null
+        },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "normal",
+                "url": "https://pokeapi.co/api/v2/type/1/"
+              }
+            }
+          ],
+        "weight": 320
       },
       {
         "name": "psyduck",
-        "url": "https://pokeapi.co/api/v2/pokemon/54/"
+        "url": "https://pokeapi.co/api/v2/pokemon/54/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "damp",
+                "url": "https://pokeapi.co/api/v2/ability/6/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "cloud-nine",
+                "url": "https://pokeapi.co/api/v2/ability/13/"
+              },
+              "is_hidden": false,
+              "slot": 2
+            },
+            {
+              "ability": {
+                "name": "swift-swim",
+                "url": "https://pokeapi.co/api/v2/ability/33/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 64,
+      "sprites": {
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/54.png",
+            "back_female": null,
+            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/54.png",
+            "back_shiny_female": null,
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+            "front_female": null,
+            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/54.png",
+            "front_shiny_female": null 
+      },
+      "types": [
+          {
+            "slot": 1,
+            "type": {
+              "name": "water",
+              "url": "https://pokeapi.co/api/v2/type/11/"
+            }
+          }
+        ],
+      "weight": 196
       },
       {
         "name": "golduck",
@@ -361,7 +862,54 @@
       },
       {
         "name": "mankey",
-        "url": "https://pokeapi.co/api/v2/pokemon/56/"
+        "url": "https://pokeapi.co/api/v2/pokemon/56/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "vital-spirit",
+                "url": "https://pokeapi.co/api/v2/ability/72/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "anger-point",
+                "url": "https://pokeapi.co/api/v2/ability/83/"
+              },
+              "is_hidden": false,
+              "slot": 2
+            },
+            {
+              "ability": {
+                "name": "defiant",
+                "url": "https://pokeapi.co/api/v2/ability/128/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 61,
+        "sprites": {
+              "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/56.png",
+              "back_female": null,
+              "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/56.png",
+              "back_shiny_female": null,
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
+              "front_female": null,
+              "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/56.png",
+              "front_shiny_female": null
+        },
+        "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "fighting",
+                "url": "https://pokeapi.co/api/v2/type/2/"
+              }
+            }
+          ],
+        "weight": 280
       },
       {
         "name": "primeape",
@@ -377,7 +925,54 @@
       },
       {
         "name": "poliwag",
-        "url": "https://pokeapi.co/api/v2/pokemon/60/"
+        "url": "https://pokeapi.co/api/v2/pokemon/60/",
+        "abilities": [
+            {
+              "ability": {
+                "name": "water-absorb",
+                "url": "https://pokeapi.co/api/v2/ability/11/"
+              },
+              "is_hidden": false,
+              "slot": 1
+            },
+            {
+              "ability": {
+                "name": "damp",
+                "url": "https://pokeapi.co/api/v2/ability/6/"
+              },
+              "is_hidden": false,
+              "slot": 2
+            },
+            {
+              "ability": {
+                "name": "swift-swim",
+                "url": "https://pokeapi.co/api/v2/ability/33/"
+              },
+              "is_hidden": true,
+              "slot": 3
+            }
+          ],
+        "base_experience": 60,
+        "sprites": {
+              "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/60.png",
+              "back_female": null,
+              "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/60.png",
+              "back_shiny_female": null,
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
+              "front_female": null,
+              "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/60.png",
+              "front_shiny_female": null
+        },
+        "types": [
+              {
+                "slot": 1,
+                "type": {
+                  "name": "water",
+                  "url": "https://pokeapi.co/api/v2/type/11/"
+                }
+              }
+            ],
+        "weight": 124
       },
       {
         "name": "poliwhirl",

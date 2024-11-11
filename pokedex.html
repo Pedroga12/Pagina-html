@@ -6,10 +6,13 @@
     <title>Pokedex</title>
 </head>
 <body>
-    <div></div>
+    <div class="container">
+        <div class="row" id="cntPokemones"></div>
+    </div>
     <script>
         const drawPokemons = (objData) => { // que son los parametros en una funcion js? 
             if(objData) { // validar siempre la informacion
+                console.log (objData)
                 /* for(let int = 0; int < objData.lenght; int ++) {
                     const detail = objData[int];
                 }
@@ -18,20 +21,31 @@
                 } */
                let intNumero = 1;
                 objData.map(detail => {
+                    if (!detail.types) return;
                     const nombrePokemon = detail.name;
                     const numero = intNumero;
-                    let objTipos = {};
+                    let objTipos = detail.types;
                     let intPeso = 0;
                     let objHabilidades = {};
                     let strImg = '';
                     let intPuntosBase = 0;
 
 
-                    intNumero = intNumero + 1;
 
-                    if (detail?.types) {
-                        objTipos = detail.types;
-                    }
+                    // encontrar la manera de manipular el elemento por su id con javascript
+
+
+                    // aqui dibujas tu tarjeta de pokemon
+                    `   <div class='col-12'>
+                            ${nombrePokemon}
+                        </div>`
+
+                        // apendizas la tarjeta en el contenedor que trajiste arriba
+
+                    
+
+
+                    intNumero = intNumero + 1;
 
                     if(detail?.weight) {
                         intPeso = detail.weight;
