@@ -8,7 +8,7 @@
 <body>
     <div></div>
     <script>
-        const drawPokemons = (objData) => { // que son los parametros en una funcion js?
+        const drawPokemons = (objData) => { // que son los parametros en una funcion js? 
             if(objData) { // validar siempre la informacion
                 /* for(let int = 0; int < objData.lenght; int ++) {
                     const detail = objData[int];
@@ -20,42 +20,37 @@
                 objData.map(detail => {
                     const nombrePokemon = detail.name;
                     const numero = intNumero;
-                    let peso = 'No tiene';
-                    let tipos = 'No tiene';
-                    let habilidades = 'No tiene';
-                    let img = '';
-                    let puntosBase = 0;
+                    let objTipos = {};
+                    let intPeso = 0;
+                    let objHabilidades = {};
+                    let strImg = '';
+                    let intPuntosBase = 0;
 
 
                     intNumero = intNumero + 1;
 
-                    if(detail?.weight) {
-                        peso = detail.weight;
+                    if (detail?.types) {
+                        objTipos = detail.types;
                     }
 
-                    if(detail?.types) {
-                        tipos = '';
-                        detail['types'].map(detailTypes => {
-                            tipos = tipos + ', ' +detailTypes.type.name
-                        });               
+                    if(detail?.weight) {
+                        intPeso = detail.weight;
                     }
                     
                     if(detail?.abilities) {
-                        habilidades = '';
-                        detail['abilities'].map(detailAblities => {
-                            habilidades = habilidades + ', ' +detailAblities.ability.name
-                        });
+                        objHabilidades = detail.abilities;
                     }
 
                     if(detail?.sprites) {
-                        img = detail.sprites.front_shiny;
+                        strImg = detail.sprites.front_shiny;
                     }
 
                     if(detail?.base_experience) {
-                        puntosBase = detail.base_experience;           
+                        intPuntosBase = detail.base_experience;           
                     }
-                    
-                   console.log(nombrePokemon, numero, peso, tipos, habilidades, img, puntosBase);
+
+                                        
+                   console.log(nombrePokemon, numero, intPeso, objTipos, objHabilidades, strImg, intPuntosBase);
                  
                     
                 });
