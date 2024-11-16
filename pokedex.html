@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row" id="cntPokemones"></div>
+    <div class="container" style="border: 2px solid black; height: 985px; overflow-y: auto; width: 100%; max-width: 100%">
+        <div class="row" id="cntPokemones" style="border: 2px solid blue;"></div>
     </div>
+    <style>
+        .card{
+            height: 96%;
+            max-height: 100%; 
+            background-color: rgb(255, 221, 0); 
+            padding: 10px; 
+            border: 2px solid blue;
+            margin: 10px;
+            border-radius: 15px;
+        }
+        .cuerpo{
+            height: 100%;
+            background-color: rgb(220, 255, 210);
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+        .name{
+            border: 1px solid black;
+            height: 50px;
+        }
+        .name-be{
+            border: 2px solid rgb(86, 56, 0);
+            margin-top: 6px;
+            height: 35px;
+            padding: 4px 4px 4px 10px;
+        }
+        .sprites{
+            border: 1px solid black;
+            height: 180px;
+        }
+        .sprites-m{
+            border: 1px solid black;
+        }
+        .types{
+            border: 1px solid black;
+            height: 20px;
+        }
+        .abilities{
+            border: 1px solid black;
+            height: 180px;
+        }
+    </style>
     <script>
         const drawPokemons = (objData) => { // que son los parametros en una funcion js? 
             if(objData) { // validar siempre la informacion
@@ -19,33 +67,23 @@
                 for(const k in objData) {
                     const detail = objData[k];
                 } */
-               let intNumero = 1;
+               let intNumero = 1;               
+               const contenedor = document.getElementById("cntPokemones")                           
                 objData.map(detail => {
                     if (!detail.types) return;
-                    const nombrePokemon = detail.name;
-                    const numero = intNumero;
-                    let objTipos = detail.types;
-                    let intPeso = 0;
-                    let objHabilidades = {};
-                    let strImg = '';
-                    let intPuntosBase = 0;
-
-
-
-                    // encontrar la manera de manipular el elemento por su id con javascript
-
-
-                    // aqui dibujas tu tarjeta de pokemon
-                    `   <div class='col-12'>
-                            ${nombrePokemon}
-                        </div>`
-
-                        // apendizas la tarjeta en el contenedor que trajiste arriba
-
-                    
-
+                    const nombrePokemon = detail.name,
+                    numero = intNumero
+                    let objTipos = detail.types,
+                    intPeso = 0,
+                    objHabilidades = {},
+                    strImg = '',
+                    intPuntosBase = 0;
 
                     intNumero = intNumero + 1;
+
+                    if(detail?.base_experience) {
+                        intPuntosBase = detail.base_experience;           
+                    }
 
                     if(detail?.weight) {
                         intPeso = detail.weight;
@@ -59,11 +97,42 @@
                         strImg = detail.sprites.front_shiny;
                     }
 
-                    if(detail?.base_experience) {
-                        intPuntosBase = detail.base_experience;           
-                    }
 
-                                        
+                    // encontrar la manera de manipular el elemento por su id con javascript
+
+                    // aqui dibujas tu tarjeta de pokemon        
+                    const maqueta = `
+                            <div class="col-3" style="height: 500px; border: 1px solid red; padding: 0px">
+                                <div class="row card">
+                                    <div class= "col-12 cuerpo">
+                                        <div class="row name">                                            
+                                            <div class="col-4 name-be">
+                                                ${nombrePokemon}
+                                            </div>                                                                                     
+                                            <div class="col-2 offset-6 name-be">
+                                                ps ${intPuntosBase}                                               
+                                            </div>
+                                        </div>
+                                        <div class="row sprites">
+                                            <div class="col-1 sprites-m">
+                                            </div>
+                                            <div class="col-10 sprites-m">
+                                            </div>
+                                            <div class="col-1 sprites-m">
+                                            </div>
+                                        </div>
+                                        <div class="row types">
+                                        </div>
+                                        <div class="row abilities">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`
+                    contenedor.innerHTML += maqueta;
+                    
+                        // apendizas la tarjeta en el contenedor que trajiste arriba
+
+                                       
                    console.log(nombrePokemon, numero, intPeso, objTipos, objHabilidades, strImg, intPuntosBase);
                  
                     
