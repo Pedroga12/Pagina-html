@@ -9,53 +9,62 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
     <title>Pokedex</title>
 </head>
 <body>
     <div class="container" style="border: 2px solid black; height: 985px; overflow-y: auto; width: 100%; max-width: 100%">
-        <div class="row" id="cntPokemones" style="border: 2px solid blue;"></div>
+        <div class="row" id="cntPokemones" style="background-color: rgb(205, 248, 255);"></div>
     </div>
     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
         .card{
             height: 96%;
             max-height: 100%; 
             background-color: rgb(255, 221, 0); 
             padding: 10px; 
-            border: 2px solid blue;
             margin: 10px;
             border-radius: 15px;
         }
         .cuerpo{
             height: 100%;
-            background-color: rgb(220, 255, 210);
-            border: 2px solid red;
+            background-color: rgb(144, 180, 128);
             border-radius: 10px;
         }
         .name{
-            border: 1px solid black;
             height: 50px;
         }
         .name-be{
-            border: 2px solid rgb(86, 56, 0);
             margin-top: 6px;
             height: 35px;
             padding: 4px 4px 4px 10px;
         }
         .sprites{
-            border: 1px solid black;
-            height: 180px;
-        }
-        .sprites-m{
-            border: 1px solid black;
+            height: 170px;
+            width: 45% !important;
+            align-items: center;
+            margin-left: 110px;
         }
         .types{
-            border: 1px solid black;
             height: 20px;
         }
         .abilities{
-            border: 1px solid black;
-            height: 180px;
+            height: 200px;
         }
+        .t{
+            background-color: rgba(95, 158, 160, 0.506);
+            height: 80px;
+            padding-top: 8px;
+        }   
+        .h{
+            background-color: rgba(95, 158, 160, 0.506);
+            height: 120px;
+            padding-top: 8px;
+        }            
     </style>
     <script>
         const drawPokemons = (objData) => { // que son los parametros en una funcion js? 
@@ -97,33 +106,83 @@
                         strImg = detail.sprites.front_shiny;
                     }
 
+                    const sprites = detail.sprites;
+                    const spriteUrls = [
+                        sprites.front_default,
+                        sprites.back_default,
+                        sprites.front_shiny,
+                        sprites.back_shiny,                                            
+                    ];
+                    
+                    const validSprites = spriteUrls.filter(url => url);
+
+                    const carouselItems = validSprites.map((url, index) => {
+                        const activeClass = index === 0 ? 'active' : '';
+                        return `
+                            <div class="carousel-item ${activeClass}">
+                                <img src="${url}" class="block w-100" alt="${nombrePokemon} image ${index + 1}">
+                            </div>
+                        `;
+                    }).join('');
+
+                    const carousel = `
+                        <div id="carousel${intNumero}" class="carousel slide">
+                            <div class="carousel-inner">
+                                ${carouselItems}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel${intNumero}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel${intNumero}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    `;
+
+                    const listaTipos = objTipos
+                        .map(tipo=> `<li>${tipo.type.name}</li>`)
+                        .join('');
+
+                    const listHab = objHabilidades
+                        .map(hab=> `<li>${hab.ability.name}</li>`)
+                        .join('');
 
                     // encontrar la manera de manipular el elemento por su id con javascript
 
                     // aqui dibujas tu tarjeta de pokemon        
                     const maqueta = `
-                            <div class="col-3" style="height: 500px; border: 1px solid red; padding: 0px">
+                            <div class="col-3" style="height: 500px; padding: 0px">
                                 <div class="row card">
                                     <div class= "col-12 cuerpo">
                                         <div class="row name">                                            
                                             <div class="col-4 name-be">
                                                 ${nombrePokemon}
                                             </div>                                                                                     
-                                            <div class="col-2 offset-6 name-be">
+                                            <div class="col-3 offset-5 name-be text-end">
                                                 ps ${intPuntosBase}                                               
                                             </div>
                                         </div>
                                         <div class="row sprites">
-                                            <div class="col-1 sprites-m">
-                                            </div>
-                                            <div class="col-10 sprites-m">
-                                            </div>
-                                            <div class="col-1 sprites-m">
-                                            </div>
-                                        </div>
-                                        <div class="row types">
+                                            ${carousel}
                                         </div>
                                         <div class="row abilities">
+                                            <div class="col-12 t d-flex align-items-center">
+                                                <ul>
+                                                    ${listaTipos}
+                                                </ul>
+                                            </div>
+                                            <div class="col-12 h d-flex align-items-center"> 
+                                                <ul>
+                                                    ${listHab}
+                                                </ul>                                           
+                                            </div>                                            
+                                        </div>
+                                        <div class="row" style="height: 30px">
+                                            <div class="col-12 text-end" style="padding-top: 5px">
+                                                Peso ${intPeso}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
