@@ -171,8 +171,42 @@
 
                     const listHab = objHabilidades
                         .map(hab=> `<li>${hab.ability.name}</li>`)
-                        .join('');
+                        .join('');                    
 
+                    const mostrarPokemonesSinDatos = (objData) => {
+                        if (objData) {
+                            const pokemonesSinDatos = objData.filter(pokemon => {
+                                return !pokemon.types || !pokemon.abilities || !pokemon.sprites;
+                            });
+
+                            const contenedorSinDatos = document.getElementById("listaPokemonesSinDatos");
+
+                            if (pokemonesSinDatos.length === 0) {
+                                contenedorSinDatos.innerHTML = `
+                                    <p class="text-center text-danger">Todos los Pokemon tienen datos.</p>
+                                    `;
+                                    return;                                    
+                            }
+
+                            const lista = pokemonesSinDatos
+                                .map(pokemon => `<li>${pokemon.name || 'Sin nombre'}</li>`)
+                                .join('');
+
+                            contenedorSinDatos.innerHTML = `
+                                <ul class="list-group">
+                                    ${lista}
+                                </ul>
+                            `;
+                        }
+                    };
+
+                    const botonSinDatos = document.getElementById("btnSinDatos");
+                    botonSinDatos.addEventListener("click", () =>{
+                        getFile().then(data => {
+                            mostrarPokemonesSinDatos(data.results);
+                        });
+                    });
+                    
                     // encontrar la manera de manipular el elemento por su id con javascript
 
                     // aqui dibujas tu tarjeta de pokemon        
